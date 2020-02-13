@@ -1,0 +1,10 @@
+version: '3'
+services:
+  client_tests:
+    command: ['npm', 'test']
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
